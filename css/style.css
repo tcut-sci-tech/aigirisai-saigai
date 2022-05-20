@@ -1,0 +1,452 @@
+@charset "UTF-8";
+
+/*---------- 文字 ---------- */
+body {
+  font-family: 'M PLUS 1p', 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0 0 0 0;
+  position: relative;
+  font-size: 6vw;
+  text-align: center;
+  font-weight: 800;
+  color: #2857b1;
+}
+
+h2 {
+  margin: 0 0 0 0;
+  position: relative;
+  font-size: 5.5vw;
+  text-align: left;
+  font-weight: 800;
+  color: #2857b1;
+}
+
+h3 {
+  margin: 0 0 0 0;
+  position: relative;
+  font-size: 1.5vw;
+  text-align: center;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+h4 {
+  margin: 0 0 0 0;
+  position: relative;
+  font-size: 4vw;
+  text-align: center;
+  font-weight: 800;
+  color: #2857b1;
+}
+
+BL {
+  margin: 0 0 0 0;
+  position: relative;
+  font-size: 4vw;
+  text-align: center;
+  font-weight: 800;
+  color: #000;
+}
+
+SAT {
+  margin: 0 0 0 0;
+  position: relative;
+  font-size: 4vw;
+  text-align: center;
+  font-weight: 800;
+  color: #0000ff;
+}
+
+SUN {
+  margin: 0 0 0 0;
+  position: relative;
+  font-size: 4vw;
+  text-align: center;
+  font-weight: 800;
+  color: #ff0000;
+}
+
+h5 {
+  margin: 0 0 0 0;
+  position: relative;
+  font-size: 4vw;
+  text-align: left;
+  font-weight: 800;
+  color: #00a7eb;
+}
+
+ku {
+  font-size: 2.3vw;
+  font-weight: 700;
+  color: #000;
+}
+
+sm {
+  font-size: 1.7vw;
+  font-weight: 700;
+  color: #000;
+}
+
+a {
+  margin: 0 0 0 0;
+  position: relative;
+  font-size: 1.7vw;
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+ul {
+  margin: 0 0 0 0;
+  position: relative;
+  font-size: 2vw;
+  font-weight: 500;
+  color: #000000;
+}
+
+txt1 {
+  margin: 0 0 0 0;
+  position: relative;
+  font-size: 2vw;
+  font-weight: 500;
+  color: #000000;
+}
+
+txt2 {
+  margin: 0 0 0 0;
+  position: relative;
+  font-size: 2.3vw;
+  font-weight: 700;
+  color: #000000;
+}
+
+/*---------- ヘッダー ---------- */
+#header{
+	width:100%;
+	background:#fff;
+	color:#000;
+	text-align: center;
+	padding: 20px;
+}
+
+#g-nav{
+  position:fixed;
+  z-index: 999;
+  top:-120%;
+  left:0;
+	width:100%;
+  height: 100vh;
+	background:#00a7eb;
+  transition: all 0.6s;
+}
+
+#g-nav.panelactive{
+  top: 0;
+}
+
+#g-nav.panelactive #g-nav-list{
+  position: fixed;
+  z-index: 999; 
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+#g-nav ul {
+  position: absolute;
+  z-index: 999;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+#g-nav li{
+  list-style: none;
+  text-align: center; 
+}
+
+#g-nav li a{
+  position: relative;
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+	text-decoration: none;
+	padding:10px;
+	display: block;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+}
+
+/*---------- ヘッダー ボタン ---------- */
+.openbtn{
+  position:fixed;
+  z-index: 9999;
+  top:10px;
+	right: 10px;
+	cursor: pointer;
+  width: 50px;
+  height:50px;
+}
+	
+.openbtn span{
+  display: inline-block;
+  transition: all .4s;
+  position: absolute;
+  left: 14px;
+  height: 3px;
+  border-radius: 2px;
+	background-color: #666;
+  width: 45%;
+  }
+
+.openbtn span:nth-of-type(1) {
+	top:15px;	
+}
+
+.openbtn span:nth-of-type(2) {
+	top:23px;
+}
+
+.openbtn span:nth-of-type(3) {
+	top:31px;
+}
+
+.openbtn.active span:nth-of-type(1) {
+  top: 18px;
+  left: 18px;
+  transform: translateY(6px) rotate(-45deg);
+  width: 30%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+	opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3){
+  top: 30px;
+  left: 18px;
+  transform: translateY(-6px) rotate(45deg);
+  width: 30%;
+}
+
+/*---------- ボタン ---------- */
+.btn06{
+  position: relative;
+  text-decoration: none;
+	display: inline-block;
+	background:#009fe8;
+	color:#fff;
+  padding: 10px 40px 10px 30px;
+	border-radius:25px;
+  text-align: center;
+  outline: none;
+  transition: ease .2s;
+  font-size: 2.3vw;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.btn06:hover{
+  background:#4ab8f7;
+}
+
+.btnarrow2::after{
+  content: '';
+  position: absolute;
+  top:42%;
+  right: 13px;
+  width: 5px;
+  height: 5px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(45deg);
+}
+
+.btnarrow2:hover::after{
+  animation: arrow .5s;
+}
+
+@keyframes arrow {
+  50% {
+    right: 10px;
+  }
+  100% {
+    right: 13px;
+  }
+}
+
+.btnarrow6{
+  position: relative;
+  background:#00a7eb;
+  padding: 5px 60px 5px 30px;
+  display: inline-block;
+  text-align: center;
+  transition: all .2s linear;
+	color:#fff;
+  text-decoration: none;
+	border:transparent 2px solid;
+  outline: none;
+}
+
+.btnarrow6:hover{
+  background:#fff;
+	color:#333;
+	border-color:#333;
+}
+
+.btnarrow6:before{
+  content:"";
+  position: absolute;
+	top:50%;
+	right:20px;
+  width:20px;
+	height:1px;
+	background:#fff;
+}
+
+.btnarrow6::after {
+  content: '';
+  position: absolute;
+  top: 40%;
+  right: 12px;
+  border: 4px solid transparent;
+  border-top-width: 4px;
+  border-bottom-width: 4px;
+  border-left-color: #fff;
+  transition: all .2s linear;
+}
+
+.btnarrow6:hover::before{
+	background:#333;
+	right:25px;
+}
+
+.btnarrow6:hover::after{
+  border-left-color: #333; 
+  right: 20px;
+}
+
+/*---------- セクション ---------- */
+.sec02 {
+  margin: 0 0 0 0;
+	height: auto;
+	background-color: #2857b1;
+}
+
+/*---------- フッター リンク ---------- */
+.op a:hover{
+	color: #fff;
+	opacity: 0.5;
+}
+
+.twitter a::before{
+  content: '';
+  display: inline-block;
+  width: 2.5vw;
+  height: 2.5vw;
+  background-image: url(https://tcut-sci-tech.github.io/photo/Logo%20twitter.png);  
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 1vw;
+}
+
+.tcu a::before{
+  content: '';
+  display: inline-block;
+  width: 2.5vw;
+  height: 2.5vw;
+  background-image: url(https://tcut-sci-tech.github.io/photo/Logo%20tcu.png);  
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 1vw;
+}
+
+.sci a::before{
+  content: '';
+  display: inline-block;
+  width: 2.5vw;
+  height: 2.5vw;
+  background-image: url(https://tcut-sci-tech.github.io/photo/Logo%20sci.png);  
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 1vw;
+}
+
+/*---------- 画面分割 ---------- */
+.flex_div {
+  display: flex;
+  justify-content: center;
+}
+
+.a_div {
+  display: inline-block;
+  width: 5%;
+  padding:0vw;
+  margin: 0vw 0vw 0vw 0vw;
+}
+
+.a_div img {
+  display: inline-block;
+	width: 100%;
+	height: auto;
+}
+
+.b_div {
+  display: inline-block;
+  width: 90%;
+  padding:0vw;
+  margin: 0vw 0vw 0vw 0vw;
+}
+
+.b_div img {
+  display: inline-block;
+	width: 100%;
+	height: auto;
+}
+
+.c_div {
+  display: inline-block;
+  width: 50%;
+  padding:0vw;
+  margin: 0vw 1vw 0vw 1vw;
+}
+
+.c_div img {
+  display: inline-block;
+	width: 100%;
+	height: auto;
+}
+
+.d_div {
+  display: inline-block;
+  width: 40%;
+  padding:0vw;
+  margin: 0vw 1vw 0vw 1vw;
+}
+
+.d_div img {
+  display: inline-block;
+	width: 100%;
+	height: auto;
+}
+
+.e_div {
+  display: inline-block;
+  width: 70%;
+  padding:0vw;
+  margin: 0vw 1vw 0vw 1vw;
+}
+
+.e_div img {
+  display: inline-block;
+	width: 100%;
+	height: auto;
+}
